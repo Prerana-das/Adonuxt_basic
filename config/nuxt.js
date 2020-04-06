@@ -18,7 +18,8 @@ axios: {
 
  plugins: [
   '~plugins/vuecommon',
-  '~plugins/iview',
+  '~plugins/iview'
+  // '~plugins/commonModules',
   // '~plugins/vuetify'
 ],
 

@@ -31,5 +31,9 @@ Route.post('delete_product', 'ProductController.destroy')
 
 
 Route.post('register', 'UserController.store')
+Route.post('login', 'UserController.userLogin')
+Route.get('/logout', 'UserController.logout')
+
+
 
 Route.any('*', 'NuxtController.render')

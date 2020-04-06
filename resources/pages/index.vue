@@ -6,6 +6,9 @@
 		<nuxt-link to="/register">
          Register
       </nuxt-link>
+	  <nuxt-link to="/login">
+         Login
+      </nuxt-link>
       <div class="_1adminOverveiw_table_recent _box_shadow _border_radious _mar_b30 _p20">
 			<p class="_title0">Product</p>
 			<div class="_overflow _table_div">

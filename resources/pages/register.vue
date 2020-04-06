@@ -9,7 +9,7 @@
                 </Input>
             </FormItem>
             <FormItem>
-                <Input type="email"  v-model="formData.email" placeholder="email">
+                <Input type="email"  v-model="formData.email" placeholder="email" >
                     <Icon type="ios-person-outline" slot="prepend"></Icon>
                 </Input>
             </FormItem>
@@ -68,17 +68,19 @@ export default {
             const res = await this.callApi('post','register',this.formData)
             if(res.status==201){
                 this.s('Registration Successfull!')
-                 this.$router.push('/')
+                 this.$router.push('/login')
                 
             }
-            else if(res.status === 400){
-                for(let d of res.data){
-                    this.e(d.message)
+              
+            if(res.status===401){
+                    for (let i of res.data) {
+                        this.w(i.message);
+                
+                        }   
                 }
-            }
             else{
                 console.log(res)
-                this.e('Error!')
+                this.e('Errorrr!')
             }
         }
     },
